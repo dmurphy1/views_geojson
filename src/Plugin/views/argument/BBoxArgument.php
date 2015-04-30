@@ -5,10 +5,18 @@
  *
  */
 
+namespace Drupal\views\Plugin\views\argument;
+
+// @todo: Figure out what I need here.
+use Drupal\views\Plugin\views\argument\ArgumentPluginBase;
+
+
+
 /**
  * Custom filter to return only points within a provided bounding box.
  */
-class views_geojson_bbox_argument extends views_handler_argument {
+// @todo: Per ArgumentPluginBase, this needs correct annotations.
+class BBoxArgument extends ArgumentPluginBase {
 
   /**
    * Filter options definition.
