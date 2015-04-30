@@ -36,7 +36,7 @@ class BBoxArgument extends ArgumentPluginBase {
   /**
    * Override the default argument form.
    */
-  public function defaultArgumentForm(&$form, &$form_state) {
+  public function defaultArgumentForm(&$form, FormStateInterface $form_state) {
     parent::default_argument_form($form, $form_state);
     // Clarify this, since we're treating pulling from the query string as
     // different than a normal arg.
