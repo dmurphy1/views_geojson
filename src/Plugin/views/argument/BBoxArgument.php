@@ -21,7 +21,7 @@ class BBoxArgument extends ArgumentPluginBase {
   /**
    * Filter options definition.
    */
-  function option_definition() {
+  protected function defineOptions() {
     $options = parent::option_definition();
     $options['arg_id'] = array('default' => 'bbox');
     $options['empty_result'] = array(
@@ -35,7 +35,7 @@ class BBoxArgument extends ArgumentPluginBase {
   /**
    * Override the default argument form.
    */
-  public function default_argument_form(&$form, &$form_state) {
+  public function defaultArgumentForm(&$form, &$form_state) {
     parent::default_argument_form($form, $form_state);
     // Clarify this, since we're treating pulling from the query string as
     // different than a normal arg.
@@ -52,7 +52,7 @@ class BBoxArgument extends ArgumentPluginBase {
   /**
    * Provide additional form options.
    */
-  public function options_form(&$form, &$form_state) {
+  public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     parent::options_form($form, $form_state);
 
     $form['bbox_wrap'] = array(
