@@ -11,12 +11,14 @@ namespace Drupal\views\Plugin\views\argument;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\argument\ArgumentPluginBase;
 
-
-
+/**
 /**
  * Custom filter to return only points within a provided bounding box.
+ *
+ * @ingroup views_argument_handlers
+ *
+ * @ViewsArgument("views_geojson_bbox_argument")
  */
-// @todo: Per ArgumentPluginBase, this needs correct annotations.
 class BBoxArgument extends ArgumentPluginBase {
 
   /**
