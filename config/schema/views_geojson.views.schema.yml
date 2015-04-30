@@ -1,0 +1,5 @@
+# Schema for the views plugins of the Views GeoJSON module.
+
+views.argument.views_geojson_bbox_argument:
+  type: views_argument
+  label: 'views_geojson_bbox_argument'
